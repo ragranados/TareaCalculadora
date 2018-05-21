@@ -3,13 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productos_abstractos;
+package productos_concretos;
+
+import productos_abstractos.Operacion;
 
 /**
  *
  * @author LN710Q
  */
-public interface Operacion {
-    int operacion(int a, int b);
+public class Resta implements Operacion{
+
+    @Override
+    public int operacion(int a, int b) {
+        return a-b;
+    }
     
 }

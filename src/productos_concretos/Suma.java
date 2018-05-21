@@ -16,8 +16,10 @@ import productos_abstractos.Operacion;
 public class Suma implements Operacion{
 
     @Override
-    public int operacion() {
+    public int operacion(int a, int b) {
+        return a+b;
         
     }
+    
     
 }
