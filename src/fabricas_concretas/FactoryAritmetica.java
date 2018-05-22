@@ -6,6 +6,9 @@
 package fabricas_concretas;
 
 import fabricas_abstractas.AbstractFactory;
+import productos_abstractos.Operacion;
+import productos_concretos.Resta;
+import productos_concretos.Suma;
 
 
 
@@ -21,19 +24,19 @@ public class FactoryAritmetica implements AbstractFactory{
     }
 
     @Override
-    public int Operar(String operacion) {
+    public Operacion Operar(String operacion) {
         switch(operacion){
-            case "sumar": 
+            case "Sumar": 
+                return new Suma();
                 
+            case "Restar":
+                return new Resta();
+            case "Multiplicar":
                 break;
-            case "restar":
-                break;
-            case "multiplicar":
-                break;
-            case "dividir":
+            case "Dividir":
                 break;
         }
-        return 0;
+        return null;
     }
 
     

@@ -14,10 +14,10 @@ import fabricas_abstractas.AbstractFactory;
 public class FactoryProducer {
     public static AbstractFactory getFactory(String accion){
         switch(accion){
-            case "Convertir":
+            case "Operar":
                 return new FactoryAritmetica();
                 
-            case "Operar":
+            case "Convertir":
                 return new FactoryConversor();
                 
             

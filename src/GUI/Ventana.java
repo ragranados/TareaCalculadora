@@ -5,13 +5,17 @@
  */
 package GUI;
 
+import fabricas_abstractas.AbstractFactory;
+import fabricas_concretas.FactoryProducer;
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import static javax.swing.JComponent.TOOL_TIP_TEXT_KEY;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import productos_abstractos.Operacion;
 
 /**
  *
@@ -22,6 +26,7 @@ public class Ventana extends JPanel{
     public int HEIGHT = 300, heightTF = 30, heightB =30;
     public JTextField textF1, textF2,textF3;
     public JButton buttonS, buttonR, buttonC;
+    private AbstractFactory accion;
 
     public Ventana() {
         this.textF1 = new JTextField();
@@ -46,12 +51,27 @@ public class Ventana extends JPanel{
         textF2.setEditable(true);
         textF3.setEditable(false);
         
+        
+        
         buttonS.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Integer suma = Integer.parseInt(textF1.getText())+Integer.parseInt(textF2.getText());
-                
-                textF3.setText(suma.toString());
+                //Integer suma = Integer.parseInt(textF1.getText())+Integer.parseInt(textF2.getText());
+                accion = FactoryProducer.getFactory("Operar");
+                Operacion suma = accion.Operar("Sumar");
+                Integer a = suma.operacion(Integer.parseInt(textF1.getText()), Integer.parseInt(textF2.getText()));
+                textF3.setText(a.toString());
+            }
+        });
+        
+        buttonR.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Integer suma = Integer.parseInt(textF1.getText())+Integer.parseInt(textF2.getText());
+                accion = FactoryProducer.getFactory("Operar");
+                Operacion suma = accion.Operar("Restar");
+                Integer a = suma.operacion(Integer.parseInt(textF1.getText()), Integer.parseInt(textF2.getText()));
+                textF3.setText(a.toString());
             }
         });
         

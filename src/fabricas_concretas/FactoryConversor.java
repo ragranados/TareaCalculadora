@@ -6,6 +6,7 @@
 package fabricas_concretas;
 
 import fabricas_abstractas.AbstractFactory;
+import productos_abstractos.Operacion;
 
 /**
  *
@@ -19,7 +20,7 @@ public class FactoryConversor implements AbstractFactory{
     }
 
     @Override
-    public int Operar(String operacion) {
+    public Operacion Operar(String operacion) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
