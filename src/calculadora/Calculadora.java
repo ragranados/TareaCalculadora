@@ -24,6 +24,18 @@ public class Calculadora {
         ventana.setResizable(false);
         ventana.pack();
         ventana.setVisible(true);
+        
+        /*String a = "astridraul";
+        String [] b = a.split("x");
+        for (String s: b){
+            System.out.println(s);
+            
+        }*/
+        
+        float num1 = 74;
+        System.out.println(num1);
+        
+        
     }
     
 }

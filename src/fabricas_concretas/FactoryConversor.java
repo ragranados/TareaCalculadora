@@ -6,7 +6,9 @@
 package fabricas_concretas;
 
 import fabricas_abstractas.AbstractFactory;
-import productos_abstractos.Operacion;
+import productos_abstractos.Convertir;
+import productos_abstractos.Operar;
+import productos_concretos.Binario;
 
 /**
  *
@@ -15,13 +17,20 @@ import productos_abstractos.Operacion;
 public class FactoryConversor implements AbstractFactory{
 
     @Override
-    public int Convertir(String conversion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Convertir Convertir(String conversion) {
+        switch(conversion){
+            case "Binario":
+                return new Binario();
+                
+        }
+        return null;
     }
 
     @Override
-    public Operacion Operar(String operacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Operar Operar(String operacion) {
+       return null;
     }
+
+    
     
 }

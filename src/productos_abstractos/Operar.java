@@ -9,7 +9,7 @@ package productos_abstractos;
  *
  * @author LN710Q
  */
-public interface Operacion {
-    int operacion(int a, int b);
+public interface Operar {
+    float operacion(float a, float b);
     
 }

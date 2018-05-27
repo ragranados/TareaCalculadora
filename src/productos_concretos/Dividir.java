@@ -5,16 +5,16 @@
  */
 package productos_concretos;
 
-import productos_abstractos.Operacion;
+import productos_abstractos.Operar;
 
 /**
  *
  * @author LN710Q
  */
-public class Dividir implements Operacion{
+public class Dividir implements Operar{
 
     @Override
-    public int operacion(int a, int b) {
+    public float operacion(float a, float b) {
         return a/b;
     }
     

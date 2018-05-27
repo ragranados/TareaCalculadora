@@ -5,7 +5,7 @@
  */
 package productos_concretos;
 
-import productos_abstractos.Operacion;
+import productos_abstractos.Operar;
 
 
 
@@ -13,10 +13,10 @@ import productos_abstractos.Operacion;
  *
  * @author LN710Q
  */
-public class Suma implements Operacion{
+public class Suma implements Operar{
 
     @Override
-    public int operacion(int a, int b) {
+    public float operacion(float a, float b) {
         return a+b;
         
     }

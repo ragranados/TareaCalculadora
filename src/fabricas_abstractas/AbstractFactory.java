@@ -5,13 +5,14 @@
  */
 package fabricas_abstractas;
 
-import productos_abstractos.Operacion;
+import productos_abstractos.Convertir;
+import productos_abstractos.Operar;
 
 /**
  *
  * @author LN710Q
  */
 public interface AbstractFactory {
-    int Convertir(String conversion);
-    Operacion Operar(String operacion);
+    Convertir Convertir(String conversion);
+    Operar Operar(String operacion);
 }
