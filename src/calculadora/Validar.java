@@ -14,18 +14,31 @@ import javax.swing.JTextField;
  * @author rau3
  */
 public class Validar {
-    
-    public void soloNumeros(JTextField texto){
+
+    public void soloNumeros(JTextField texto) {
         texto.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e){
+            public void keyTyped(KeyEvent e) {
                 char c = e.getKeyChar();
-                if(!Character.isDigit(c)){
+                if (!Character.isDigit(c)) {
                     e.consume();
                 }
             }
         });
-        
+
     }
-    
+
+    public void soloLetras(JTextField texto) {
+        texto.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                    e.consume();
+                }
+            }
+        });
+
+    }
+
 }
